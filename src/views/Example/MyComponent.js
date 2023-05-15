@@ -2,30 +2,38 @@ import React from "react";
 
 class MyComponent extends React.Component {
     state = {
-        name: 'tuan',
-        email: 'tuanhosy@gmail.com',
+        firstName: "tuan",
+        lastName: "ho"
     }
-    handleChangeName = (event) => {
+    handleChangeFirstName = (event) => {
         this.setState({
-            name: event.target.value
+            firstName: event.target.value
         })
     }
-    handleClickButton = () => {
-        alert('Click me');
+    handleChangeLastName = (event) => {
+        this.setState({
+            lastName: event.target.value
+        })
+    }
+    handleClickSumit = (event) => {
+        console.log('state:', this.state);
     }
     render() {
         return (
             <>
-                <div className="first">
-                    <input value={this.state.name} type="text" onChange={(event) => this.handleChangeName(event)} />
-                    <h2>My name is {this.state['name']}</h2>
-                </div>
-                <div className="second">
-                    <h2>My email: {this.state.email}</h2>
-                </div>
-                <div className="third">
-                    <button onClick={() => this.handleClickButton()}>Click me</button>
-                </div>
+                <label htmlFor="fname">First name:</label><br />
+                <input
+                    type="text"
+                    value={this.state.firstName}
+                    onChange={(event) => this.handleChangeFirstName(event)}
+                /><br />
+                <label htmlFor="lname">Last name:</label><br />
+                <input
+                    type="text"
+                    value={this.state.lastName}
+                    onChange={(event) => { this.handleChangeLastName(event) }}
+                /><br /><br />
+                <input type="submit" value="Submit" onClick={(event) => this.handleClickSumit(event)} />
             </>
 
         )

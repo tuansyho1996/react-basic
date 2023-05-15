@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.scss';
 import MyComponent from './Example/MyComponent.js';
 
+
 const App = (props) => {
   return (
     <div className="App">
@@ -10,14 +11,6 @@ const App = (props) => {
         <p>
           Hello wellcome to reactjs basic
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
         <MyComponent />
       </header>
     </div>
