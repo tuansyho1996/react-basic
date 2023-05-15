@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.scss';
 import MyComponent from './Example/MyComponent.js';
 
-function App() {
+const App = (props) => {
   return (
     <div className="App">
       <header className="App-header">
