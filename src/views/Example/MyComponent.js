@@ -41,6 +41,7 @@ class MyComponent extends React.Component {
                     onChange={(event) => { this.handleChangeLastName(event) }}
                 /><br />
                 <input type="submit" value="Submit" onClick={(event) => this.handleClickSumit(event)} />
+                <br />
                 <ChildComponent
                     name={this.state.firstName}
                     address={this.state.address}
