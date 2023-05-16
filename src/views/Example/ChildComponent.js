@@ -29,7 +29,7 @@ class ChildComponent extends React.Component {
                                     arrJobs.map((item, index) => {
                                         return (
                                             <div key={item.id}>
-                                                {item.name} -{item.salary}
+                                                {item.title} -{item.salary} <span>$</span>
                                             </div>
                                         )
                                     })

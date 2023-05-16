@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.scss';
-import MyComponent from './Example/MyComponent.js';
+import MyComponent from './Example/MyComponent';
 
 
 const App = (props) => {
