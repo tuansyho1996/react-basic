@@ -4,7 +4,13 @@ import ChildComponent from "./ChildComponent";
 class MyComponent extends React.Component {
     state = {
         firstName: "tuan",
-        lastName: "ho"
+        lastName: "ho",
+        address: "vietnam",
+        arrJobs: [
+            { id: 'abc1', name: 'Developer', salary: '500 $' },
+            { id: 'abc2', name: 'Tester', salary: '500 $' },
+            { id: 'abc3', name: 'Manager', salary: '1000 $' },
+        ]
     }
     handleChangeFirstName = (event) => {
         this.setState({
@@ -22,21 +28,23 @@ class MyComponent extends React.Component {
     render() {
         return (
             <>
-                <label htmlFor="fname">First name:</label><br />
+                <label htmlFor="fname">First name:</label>
                 <input
                     type="text"
                     value={this.state.firstName}
                     onChange={(event) => this.handleChangeFirstName(event)}
                 /><br />
-                <label htmlFor="lname">Last name:</label><br />
+                <label htmlFor="lname">Last name:</label>
                 <input
                     type="text"
                     value={this.state.lastName}
                     onChange={(event) => { this.handleChangeLastName(event) }}
-                /><br /><br />
+                /><br />
                 <input type="submit" value="Submit" onClick={(event) => this.handleClickSumit(event)} />
-                <ChildComponent name={'tuan'} />
-                <ChildComponent age={'27'} />
+                <ChildComponent
+                    name={this.state.firstName}
+                    address={this.state.address}
+                    arrJobs={this.state.arrJobs} />
             </>
 
         )
