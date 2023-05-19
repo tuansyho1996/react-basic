@@ -15,7 +15,8 @@ class AddComponent extends React.Component {
             salary: event.target.value
         })
     }
-    handleClickSumit = () => {
+    handleClickSumit = (event) => {
+        event.preventDefault();
         if (!this.state.title || !this.state.salary) {
             alert('Missing required params')
             return;
@@ -33,22 +34,25 @@ class AddComponent extends React.Component {
     }
     render() {
         return (
-            <>
-                <label htmlFor="fname">Job's title:</label>
-                <input
-                    type="text"
-                    value={this.state.title}
-                    onChange={(event) => this.handleChangeTitleJob(event)}
-                /><br />
-                <label htmlFor="lname">Salary:</label>
-                <input
-                    type="text"
-                    value={this.state.salary}
-                    onChange={(event) => { this.handleChangeSalary(event) }}
-                /><br />
-                <input type="submit" value="Submit" onClick={() => this.handleClickSumit()} />
-                <br />
-            </>
+            <div className="form-input">
+                <form>
+                    <label htmlFor="fname">Job's title:</label>
+                    <input
+                        type="text"
+                        value={this.state.title}
+                        onChange={(event) => this.handleChangeTitleJob(event)}
+                    /><br />
+                    <label htmlFor="lname">Salary:</label>
+                    <input
+                        type="text"
+                        value={this.state.salary}
+                        onChange={(event) => { this.handleChangeSalary(event) }}
+                    /><br />
+                    <input type="submit" value="Submit" onClick={(event) => this.handleClickSumit(event)} />
+                    <br />
+                </form>
+
+            </div>
         )
     }
 }
