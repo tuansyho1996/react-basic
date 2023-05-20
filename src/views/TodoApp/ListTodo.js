@@ -1,8 +1,7 @@
 import React from "react";
 import AddTodo from "./AddTodo";
 import './Todo.scss';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 
 class ListTodo extends React.Component {
 
@@ -103,7 +102,6 @@ class ListTodo extends React.Component {
                         })
                     }
                 </div>
-                <ToastContainer />
             </div>
         )
     }
