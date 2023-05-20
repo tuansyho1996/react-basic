@@ -13,7 +13,7 @@ class AddTodo extends React.Component {
     handleClickAdd = (event) => {
         event.preventDefault();
         if (!this.state.todo) {
-            toast.error('Missing required params ', { autoClose: 500 });
+            toast.error(`Missing Title's Todo `, { autoClose: 500 });
             return;
         }
         let id = Math.floor(Math.random() * 10001)
