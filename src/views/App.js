@@ -10,7 +10,6 @@ import {
   BrowserRouter,
   Switch,
   Route,
-  Link
 } from 'react-router-dom';
 
 
@@ -20,8 +19,8 @@ const App = (props) => {
     <BrowserRouter>
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
           <Nav />
+          <img src={logo} className="App-logo" alt="logo" />
           <Switch>
             <Route path="/todo">
               <ListTodo />
