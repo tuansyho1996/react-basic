@@ -7,6 +7,7 @@ import Nav from './Nav/Nav';
 import MyComponent from './Example/MyComponent';
 import Home from './Home/Home';
 import ListUser from './ListUsers/ListUsers';
+import DetailUser from './ListUsers/DetailUser';
 import {
   BrowserRouter,
   Switch,
@@ -33,8 +34,11 @@ const App = (props) => {
             <Route path="/about">
               <MyComponent />
             </Route>
-            <Route path="/user">
+            <Route path="/user" exact>
               <ListUser />
+            </Route>
+            <Route path="/user/:id" >
+              <DetailUser />
             </Route>
           </Switch>
         </header>

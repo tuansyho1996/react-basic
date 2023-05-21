@@ -2,9 +2,18 @@
     .list-users-content{
         .user-child{
             height: 40px;
-    border: solid 1px;
-    width: 400px;
-    margin: 0 auto;
+            border: solid 1px;
+            width: 400px;
+            margin: 0 auto;
+            cursor: pointer;
         }
+        .user-child:hover{
+            color: orange;
+        }
+    }
+}
+.detail-user{
+    button{
+        cursor: pointer;
     }
 }
