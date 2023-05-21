@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Nav from './Nav/Nav';
 import MyComponent from './Example/MyComponent';
 import Home from './Home/Home';
+import ListUser from './ListUsers/ListUsers';
 import {
   BrowserRouter,
   Switch,
@@ -15,6 +16,7 @@ import {
 
 
 const App = (props) => {
+
   return (
     <BrowserRouter>
       <div className="App">
@@ -22,14 +24,17 @@ const App = (props) => {
           <Nav />
           <img src={logo} className="App-logo" alt="logo" />
           <Switch>
+            <Route path="/" exact>
+              <Home />
+            </Route>
             <Route path="/todo">
               <ListTodo />
             </Route>
             <Route path="/about">
               <MyComponent />
             </Route>
-            <Route path="/">
-              <Home />
+            <Route path="/user">
+              <ListUser />
             </Route>
           </Switch>
         </header>
